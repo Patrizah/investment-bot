@@ -24,33 +24,32 @@
         .button.sell {
             background-color: #dc3545;
         }
-        .button:disabled {
-            background-color: #6c757d;
-        }
     </style>
 </head>
 <body>
     <h1>Investment Bot Web App</h1>
     <p>Use the buttons below to interact with your investment bot:</p>
-    
-    <button class="button" id="buyButton" onclick="buyAsset()">Buy Asset</button>
-    <button class="button sell" id="sellButton" onclick="sellAsset()">Sell Asset</button>
-    <button class="button" id="portfolioButton" onclick="viewPortfolio()">View Portfolio</button>
-    
+    <button class="button" onclick="buyAsset()">Buy Asset</button>
+    <button class="button sell" onclick="sellAsset()">Sell Asset</button>
+    <button class="button" onclick="viewPortfolio()">View Portfolio</button>
+
     <script>
         function buyAsset() {
-            alert("Buying asset...");
-            // Here you can add JavaScript code to send request to your bot's server
+            // Placeholder function to simulate buying an asset
+            alert('Buy Asset button clicked');
+            // Here you can add code to send a request to your Telegram bot or server
         }
 
         function sellAsset() {
-            alert("Selling asset...");
-            // Here you can add JavaScript code to send request to your bot's server
+            // Placeholder function to simulate selling an asset
+            alert('Sell Asset button clicked');
+            // Here you can add code to send a request to your Telegram bot or server
         }
 
         function viewPortfolio() {
-            alert("Viewing portfolio...");
-            // Here you can add JavaScript code to send request to your bot's server
+            // Placeholder function to simulate viewing portfolio
+            alert('View Portfolio button clicked');
+            // Here you can add code to send a request to your Telegram bot or server
         }
     </script>
 </body>
