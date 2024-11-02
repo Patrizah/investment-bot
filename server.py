@@ -1,10 +1,11 @@
 from flask import Flask, request, jsonify
 import requests
+import os
 
 app = Flask(__name__)
 
-TELEGRAM_TOKEN = "7907758938:AAEPrm91eAlG7lDiqgbDc1g6E5RrQSEQ7lk"
-TELEGRAM_CHAT_ID = "352880178"
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "7907758938:AAEPrm91eAlG7lDiqgbDc1g6E5RrQSEQ7lk")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "352880178")
 
 portfolio = []
 
@@ -69,4 +70,5 @@ def send_telegram_message(message):
         app.logger.error(f"Failed to send Telegram message: {str(e)}")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
